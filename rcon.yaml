@@ -1,0 +1,6 @@
+default:
+  address: "127.0.0.1:25575"
+  password: "yourpassword"
+  log: "rcon-default.log"
+  type: "" # rcon, telnet, web.
+  timeout: "10s"
