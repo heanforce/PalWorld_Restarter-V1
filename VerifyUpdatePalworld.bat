@@ -12,11 +12,12 @@ IF NOT EXIST "%steamcmd_file%" (
 "%steamcmd_file%" +force_install_dir "%~dp0\." +login anonymous +app_update 2394010 validate +quit
 
 @echo off
-cd /d C:\server\Palworld Dedicated Server
+
+REM Change the current directory to the script's directory
+cd /d %~dp0
 
 REM Add a 5-second delay using the timeout command
 timeout /t 5 /nobreak
 
 start "" PalServer.exe -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -log
 exit
-
