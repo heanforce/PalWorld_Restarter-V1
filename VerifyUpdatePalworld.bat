@@ -13,7 +13,10 @@ IF NOT EXIST "%steamcmd_file%" (
 
 @echo off
 cd /d C:\server\Palworld Dedicated Server
+
+REM Add a 5-second delay using the timeout command
+timeout /t 5 /nobreak
+
 start "" PalServer.exe -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -log
 exit
-
 
